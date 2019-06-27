@@ -112,9 +112,8 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
 <div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
-
-## ارسال پیام
-## ارسال پیام گروهی (متد SendMessage)
+ارسال پیام##ارسال پیام
+##ارسال پیام گروهی (متد SendMessage)
 
 
 از این متد برای ارسال پیام گروهی استفاده می شود. بدیهی است از این پیام برای ارسال پیام تکی نیز میتوان استفاده نمود.
@@ -258,7 +257,8 @@ raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \
 ```
 
 <div dir="rtl" >
-دریافت اعتبار ( **متد**  **GetCredit** )
+
+## دریافت اعتبار (متد GetCredit)
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
