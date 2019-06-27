@@ -52,7 +52,6 @@ implementation files('libs/raygansms.aar')
  </div>
  
 ```
-
 private Raygansms raygansms = new Raygansms("username", "password");
 private String[] Mobiles = { "09120000000", "09120000001" };
 private RecipientsMessage[] recipientsMessages = {};
@@ -79,11 +78,13 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
     }
 }
 
-
 ```
 
+<div dir="rtl" >
 در اینجاد در متد updateUiWithResult نتیجه مورد نیاز را بررسی کرده و بر اساس خروجی نتیجه مورد نیاز را به کاربر نمایش دهید. برای نمونه کد زیر را مشاهده کنید.
+ </div>
 
+ ```
 **private void** updateUiWithResult(Result result) {
 
     **if** (result != **null** &amp;&amp; **textView**!= **null** &amp;&amp; ! **this**.isFinishing()) {
@@ -101,7 +102,8 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
     }
 
 }
-
+ ```
+<div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
 ارسال پیام
@@ -109,6 +111,7 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
 ارسال پیام گروهی ( **متد**  **SendMessage** )
 
 از این متد برای ارسال پیام گروهی استفاده می شود. بدیهی است از این پیام برای ارسال پیام تکی نیز میتوان استفاده نمود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -118,10 +121,14 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
 | UserGroupID | String | گروه پیام |
 | SendDateInTimeStamp | Long | تاریخ ارسال پیام به صورتTimeStamp  (به ثانیه) |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+ ```
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
-
+ ```
+<div dir="rtl" >
 **ملاحضات:**
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
@@ -129,6 +136,7 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 ارسال پیام متناظر ( **متد**  **SendCorrespondingMessage** )
 
 از این متد برای ارسال پیام متناظر استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -138,11 +146,15 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 
 نمونه کد فراخوانی:
 
+ ```
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
-
+ ```
+ 
+<div dir="rtl" >
 ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -152,49 +164,73 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
 | UserGroupID | String | گروه پیام |
 | recipientsMessage | RecipientsMessage[] | آرایه ای از شماره ها و پیام های متناظر |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+ ```
 raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMessages);
+ ```
 
+<div dir="rtl" >
 مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | groupMessageId | String | شناسه گروه ارسال پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+ ```
 raygansms.GroupMessageStatus(UserGroupID);
+ ```
 
+<div dir="rtl" >
 مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | messageId | String[] | شناسه گروه ارسال پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+ ```
 raygansms.CorrespondingMessageStatus(MessageIDs);
-
+ ```
+ 
+<div dir="rtl" >
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | groupId | String | شناسه ارسال پیام کاربر |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+```
 raygansms.GetGroupMessageId(UserGroupID);
+```
 
+<div dir="rtl" >
 پیام های دریافتی ( **متد**  **ReceiveMessages** )
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
@@ -203,37 +239,55 @@ raygansms.GetGroupMessageId(UserGroupID);
 | EndDate | Long | تاریخ پایان به صورت TimeStamp |
 | page | int | شماره صفحه |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+```
 raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \* 24 \* 60)) / 1000L,System.currentTimeMillis() / 1000L, 1);
-
+```
+```
 دریافت اعتبار ( **متد**  **GetCredit** )
 
+<div dir="rtl" >
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
+</div>
 
+```
 raygansms.GetCredit();
+```
 
+<div dir="rtl" >
 قیمت پیامک ( **متد**  **GetPrices** )
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
+</div>
 
+```
 raygansms.GetPrices();
+```
 
+<div dir="rtl" >
 بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
+</div>
 
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | Mobiles | String[] | لیستی از شماره موبایل ها برای بررسی |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
+```
 raygansms.ShowWhiteList(Mobiles);
+```
 
 تفسیر کد های خروجی
 
