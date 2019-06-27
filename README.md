@@ -24,7 +24,7 @@ implementation files('libs/raygansms.aar')
 اگر ProGuard  را در برنامه تان فعال کرده‌اید کدهای زیر را هم به فایل آن اضافه کنید.
 </div>
 
-```
+```java
 -keep public enum ir.trez.raygansms.**{
     *;
 }
