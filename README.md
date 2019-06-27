@@ -236,6 +236,7 @@ raygansms.GetGroupMessageId(UserGroupID);
 ```
 
 <div dir="rtl" >
+
 ## پیام های دریافتی (متد ReceiveMessages)
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
