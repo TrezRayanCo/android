@@ -6,7 +6,7 @@
 در ابتدا کتابخانه را به پروژه خود اضافه کنید. برای اضافه کردن کتابخانه به برنامه اندرویدیتان ابتدا فایل را در پوشه libs در زیر شاخه app قرار دهید. سپس کدهای زیر را به فایل build.gradle در شاخه app اضافه کنید.
 </div>
 
-```java
+```
 implementation 'com.google.code.gson:gson:2.8.5'
 implementation files('libs/raygansms.aar')
 ```
