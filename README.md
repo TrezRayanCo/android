@@ -182,7 +182,7 @@ raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMess
  ```
 
 <div dir="rtl" >
-مشاهده وضعیت ارسال پیام گروهی ( **متد**  **GroupMessageStatus** )
+## مشاهده وضعیت ارسال پیام گروهی (متد GroupMessageStatus)
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
 </div>
@@ -200,7 +200,7 @@ raygansms.GroupMessageStatus(UserGroupID);
  ```
 
 <div dir="rtl" >
-مشاهده وضعیت ارسال پیام متناظر ( **متد**  **CorrespondingMessageStatus** )
+## مشاهده وضعیت ارسال پیام متناظر (متد CorrespondingMessageStatus)
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
 </div>
@@ -218,7 +218,7 @@ raygansms.CorrespondingMessageStatus(MessageIDs);
  ```
 
 <div dir="rtl" >
-دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
+## دریافت شناسه گروه پیام (متد GetGroupMessageId)
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
 </div>
@@ -236,7 +236,7 @@ raygansms.GetGroupMessageId(UserGroupID);
 ```
 
 <div dir="rtl" >
-پیام های دریافتی ( **متد**  **ReceiveMessages** )
+##  پیام های دریافتی (متد ReceiveMessages)
 
 از این متد برای واکشی ، لیست پیام های در یافتی استفاده می شود.
 </div>
@@ -283,7 +283,7 @@ raygansms.GetPrices();
 ```
 
 <div dir="rtl" >
-بررسی شماره ها در لیست سیاه ( **متد**  **ShowWhiteList** )
+##  بررسی شماره ها در لیست سیاه (متد ShowWhiteList)
 
 خروجی متد زیر لیست شماره موبایل هایی است که در لیست سیاه قرار ندارند.
 </div>
