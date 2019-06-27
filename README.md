@@ -182,6 +182,7 @@ raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMess
  ```
 
 <div dir="rtl" >
+
 ## مشاهده وضعیت ارسال پیام گروهی (متد GroupMessageStatus)
 
 از این متد برای واکشی، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -200,6 +201,7 @@ raygansms.GroupMessageStatus(UserGroupID);
  ```
 
 <div dir="rtl" >
+
 ## مشاهده وضعیت ارسال پیام متناظر (متد CorrespondingMessageStatus)
 
 از این متد برای واکشی ، وضعیت لیست پیام های ارسالی استفاده می شود.
@@ -218,6 +220,7 @@ raygansms.CorrespondingMessageStatus(MessageIDs);
  ```
 
 <div dir="rtl" >
+
 ## دریافت شناسه گروه پیام (متد GetGroupMessageId)
 
 از این متد برای دریافت ، شناسه گروه پیام ارسالی استفاده می شود.
