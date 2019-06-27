@@ -2,18 +2,19 @@
 <div dir="rtl" >
 **باسمه تعالی**
 در ابتدا کتابخانه را به پروژه خود اضافه کنید. برای اضافه کردن کتابخانه به برنامه اندرویدیتان ابتدا فایل را در پوشه libs در زیر شاخه app قرار دهید. سپس کدهای زیر را به فایل build.gradle در شاخه app اضافه کنید.
-<div>
+</div>
 
 ```
-implementation **&#39;com.google.code.gson:gson:2.8.5&#39;**
-
-implementation files( **&#39;libs/raygansms.aar&#39;** )
+implementation 'com.google.code.gson:gson:2.8.5'
+implementation files('libs/raygansms.aar')
 ```
 <div dir="rtl" >
 برنامه شما برای دریافت اطلاعات مورد نیاز باید دسترسی به اینترنت هم داشته باشد. برای این منظور خط زیر را در فایل AndroidManifest.xml  اضافه کنید.
-<div>
-   
-\&lt; **uses-permission**  **android**** :name= ****&quot;android.permission.INTERNET&quot;** /\&gt;
+</div>
+
+```
+<uses-permission android:name="android.permission.INTERNET" /> 
+```
 
 اگر ProGuard  را در برنامه تان فعال کرده‌اید کدهای زیر را هم به فایل آن اضافه کنید.
 
@@ -26,6 +27,7 @@ implementation files( **&#39;libs/raygansms.aar&#39;** )
 }
 ```
 
+<div dir="rtl" >
 حالا می‌توانید در برنامه اندرویدیتان از آن استفاده کنید.
 
 برای استفاده از کتابخانه ابتدا یک نمونه از کلاس Raygansms ایجاد می کنید. دقت کنید اطلاعات ورودی مورد نیاز برای سازنده این نمونه نام کاربری و رمز سامانه پیامکی خودتان است. در ادامه هر یک از متدهای آنرا شرح می دهیم.
@@ -37,15 +39,19 @@ implementation files( **&#39;libs/raygansms.aar&#39;** )
 **مقدار برگشتی متدها (شی** **Result)**
 
 متدهای دیگر کتابخانه (به غیر از getAuthHeader ) از این نوع بر می گردانند. این نوع شامل سه متغییر است. یکی Code از نوع ResultCode و بیانگر موفقیت آمیز بودن عملیات یا شماره خطا است. نوع Message متن نتیجه را مشخص می کند. نوع Result نتیجه مربوط به متد را مشخص می‌کند و می‌تواند عدد، رشته و از نوع JSON باشد.
-
+</div>
+   
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | Code | ResultCode | کد نتیجه عملیات |
 | Message | String | متن نتیجه عملیات |
 | Result | JsonElement | اطلاعات دیگر عملیات درخواستی |
 
+<div dir="rtl" >
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است. دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید.
-
+ </div>
+ 
+```
 **private** Raygansms **raygansms** = **new** Raygansms( **&quot;username&quot;** , **&quot;password&quot;** );
 
 **private** String[] **Mobiles** = { **&quot;09120000000&quot;** , **&quot;09120000001&quot;** };
@@ -95,6 +101,8 @@ implementation files( **&#39;libs/raygansms.aar&#39;** )
     }
 
 }
+
+```
 
 در اینجاد در متد updateUiWithResult نتیجه مورد نیاز را بررسی کرده و بر اساس خروجی نتیجه مورد نیاز را به کاربر نمایش دهید. برای نمونه کد زیر را مشاهده کنید.
 
