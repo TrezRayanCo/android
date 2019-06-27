@@ -1,6 +1,8 @@
 
 <div dir="rtl" >
+   
 **باسمه تعالی**
+   
 در ابتدا کتابخانه را به پروژه خود اضافه کنید. برای اضافه کردن کتابخانه به برنامه اندرویدیتان ابتدا فایل را در پوشه libs در زیر شاخه app قرار دهید. سپس کدهای زیر را به فایل build.gradle در شاخه app اضافه کنید.
 </div>
 
@@ -16,7 +18,9 @@ implementation files('libs/raygansms.aar')
 <uses-permission android:name="android.permission.INTERNET" /> 
 ```
 
+<div dir="rtl" >
 اگر ProGuard  را در برنامه تان فعال کرده‌اید کدهای زیر را هم به فایل آن اضافه کنید.
+</div>
 
 ```
 -keep public enum ir.trez.raygansms.**{
@@ -40,7 +44,7 @@ implementation files('libs/raygansms.aar')
 
 متدهای دیگر کتابخانه (به غیر از getAuthHeader ) از این نوع بر می گردانند. این نوع شامل سه متغییر است. یکی Code از نوع ResultCode و بیانگر موفقیت آمیز بودن عملیات یا شماره خطا است. نوع Message متن نتیجه را مشخص می کند. نوع Result نتیجه مربوط به متد را مشخص می‌کند و می‌تواند عدد، رشته و از نوع JSON باشد.
 </div>
-   
+
 | نام پارامتر | نوع پارامتر | توضیحات |
 | --- | --- | --- |
 | Code | ResultCode | کد نتیجه عملیات |
@@ -50,7 +54,7 @@ implementation files('libs/raygansms.aar')
 <div dir="rtl" >
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است. دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید.
  </div>
- 
+
 ```
 private Raygansms raygansms = new Raygansms("username", "password");
 private String[] Mobiles = { "09120000000", "09120000001" };
@@ -103,6 +107,7 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
 
 }
  ```
+
 <div dir="rtl" >
 در ادامه متدهای کتابخانه را شرح می دهیم.
 
@@ -128,6 +133,7 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
  ```
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
  ```
+ 
 <div dir="rtl" >
 **ملاحضات:**
 
@@ -144,7 +150,9 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 | recipientsMessage | RecipientsMessage[] | آرایه ای از شماره ها و پیام های متناظر |
 | UserGroupID | String | گروه پیام |
 
+<div dir="rtl" >
 نمونه کد فراخوانی:
+</div>
 
  ```
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
@@ -207,7 +215,7 @@ raygansms.GroupMessageStatus(UserGroupID);
  ```
 raygansms.CorrespondingMessageStatus(MessageIDs);
  ```
- 
+
 <div dir="rtl" >
 دریافت شناسه گروه پیام ( **متد**  **GetGroupMessageId** )
 
@@ -246,10 +254,10 @@ raygansms.GetGroupMessageId(UserGroupID);
 ```
 raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \* 24 \* 60)) / 1000L,System.currentTimeMillis() / 1000L, 1);
 ```
-```
-دریافت اعتبار ( **متد**  **GetCredit** )
 
 <div dir="rtl" >
+دریافت اعتبار ( **متد**  **GetCredit** )
+
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
 نمونه کد فراخوانی:
@@ -289,7 +297,9 @@ raygansms.GetPrices();
 raygansms.ShowWhiteList(Mobiles);
 ```
 
+<div dir="rtl" >
 تفسیر کد های خروجی
+</div>
 
 | نوع ResultCode | کد خطا | توضیح خطا |
 | --- | --- | --- |
