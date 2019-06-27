@@ -160,7 +160,7 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
  ```
  
 <div dir="rtl" >
-ارسال پیام به پورت خاص ( **متد**  **SendMessageToPort** )
+## ارسال پیام به پورت خاص (متد SendMessageToPort)
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
 </div>
