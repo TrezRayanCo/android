@@ -57,7 +57,7 @@ implementation files('libs/raygansms.aar')
 در کد زیر نمونه کدی برای دریافت اعتبار حساب استفاده شده است. دقت کنید برای اجرا شما باید از کلاس Raygansms یک متغیر ایجاد کرده و متد مربوط به اجرا را در کد فرابخوانید.
  </div>
 
-```
+```java
 private Raygansms raygansms = new Raygansms("username", "password");
 private String[] Mobiles = { "09120000000", "09120000001" };
 private RecipientsMessage[] recipientsMessages = {};
@@ -90,7 +90,7 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
 در اینجاد در متد updateUiWithResult نتیجه مورد نیاز را بررسی کرده و بر اساس خروجی نتیجه مورد نیاز را به کاربر نمایش دهید. برای نمونه کد زیر را مشاهده کنید.
  </div>
 
- ```
+ ```java
 private void updateUiWithResult(Result result) {
     if(result != null && textView != null && !this.isFinishing()) {
         String text = "Code:\t" + result.getCode() + "\nMessage:\t" + result.getMessage();
