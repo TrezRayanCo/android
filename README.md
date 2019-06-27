@@ -91,22 +91,14 @@ public class CallSMS extends AsyncTask<Void, Void, Result> {
  </div>
 
  ```
-**private void** updateUiWithResult(Result result) {
-
-    **if** (result != **null** &amp;&amp; **textView**!= **null** &amp;&amp; ! **this**.isFinishing()) {
-
-        String text = **&quot;Code:**** \t ****&quot;** + result.getCode() + **&quot;**** \n ****Message:**** \t ****&quot;** + result.getMessage();
-
-        **if** (result.getResult() != **null** ){
-
-            text += **&quot;**** \n ****Result:**** \t ****&quot;** + result.getResult();
-
+private void updateUiWithResult(Result result) {
+    if(result != null && textView != null && !this.isFinishing()) {
+        String text = "Code:\t" + result.getCode() + "\nMessage:\t" + result.getMessage();
+        if(result.getResult() != null){
+            text += "\nResult:\t" + result.getResult();
         }
-
-        **textView**.setText(text);
-
+        textView.setText(text);
     }
-
 }
  ```
 
