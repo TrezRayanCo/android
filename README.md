@@ -257,7 +257,7 @@ raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \
 
 <div dir="rtl" >
 
-## دریافت اعتبار (متد GetCredit)
+##  دریافت اعتبار (متد GetCredit)
 
 از این متد برای واکشی ، اعتبار کاربر استفاده می شود.
 
@@ -269,7 +269,8 @@ raygansms.GetCredit();
 ```
 
 <div dir="rtl" >
-قیمت پیامک ( **متد**  **GetPrices** )
+
+## قیمت پیامک (متد GetPrices)
 
 از این متد برای واکشی تعرفه ارسال پیامک توسط کاربر استفاده می شود.
 
