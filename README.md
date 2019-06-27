@@ -52,55 +52,33 @@ implementation files('libs/raygansms.aar')
  </div>
  
 ```
-**private** Raygansms **raygansms** = **new** Raygansms( **&quot;username&quot;** , **&quot;password&quot;** );
 
-**private** String[] **Mobiles** = { **&quot;09120000000&quot;** , **&quot;09120000001&quot;** };
-
-**private** RecipientsMessage[] **recipientsMessages** = {};
-
-**private** String[] **MessageIDs** = { **&quot;1&quot;** , **&quot;2&quot;** };
-
-**private** String **PhoneNumber** = **&quot;5000000000&quot;** ;
-
-**private** String **UserGroupID** = **&quot;1&quot;** ;
-
-**private** Integer **PORT** = 90;
-
-**private** String _Hello_ = **&quot;** سلام **&quot;** ;
-
-**public class** CallSMS **extends** AsyncTask\&lt;Void, Void, Result\&gt; {
-
+private Raygansms raygansms = new Raygansms("username", "password");
+private String[] Mobiles = { "09120000000", "09120000001" };
+private RecipientsMessage[] recipientsMessages = {};
+private String[] MessageIDs = { "1", "2" };
+private String PhoneNumber = "5000000000";
+private String UserGroupID = "1";
+private Integer PORT = 90;
+private String Hello = "سلام";
+public class CallSMS extends AsyncTask<Void, Void, Result> {
     @Override
-
-    **protected void** onPreExecute() { }
-
+    protected void onPreExecute() { }
     @Override
-
-    **protected** Result doInBackground(Void... voids) {
-
-        **try** {
-
-            **return**  **raygansms**.GetCredit();
-
-        } **catch** (IOException e) {
-
+    protected Result doInBackground(Void... voids) {
+        try {
+            return raygansms.GetCredit();
+        } catch (IOException e) {
             e.printStackTrace();
-
         }
-
-        **return null** ;
-
+        return null;
     }
-
     @Override
-
-    **protected void** onPostExecute(Result result) {
-
+    protected void onPostExecute(Result result) {
         updateUiWithResult(result);
-
     }
-
 }
+
 
 ```
 
