@@ -123,7 +123,7 @@ private void updateUiWithResult(Result result) {
 نمونه کد فراخوانی:
 </div>
 
- ```
+ ```javascript
 raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTimeMillis() / 1000L);
  ```
  
@@ -147,7 +147,7 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 نمونه کد فراخوانی:
 </div>
 
- ```
+ ```javascript
 raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID);
  ```
  
@@ -170,7 +170,7 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
 نمونه کد فراخوانی:
 </div>
 
- ```
+ ```javascript
 raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMessages);
  ```
 
@@ -189,7 +189,7 @@ raygansms.SendMessageToPort(PhoneNumber, PORT, PORT, UserGroupID, recipientsMess
 نمونه کد فراخوانی:
 </div>
 
- ```
+ ```javascript
 raygansms.GroupMessageStatus(UserGroupID);
  ```
 
@@ -208,7 +208,7 @@ raygansms.GroupMessageStatus(UserGroupID);
 نمونه کد فراخوانی:
 </div>
 
- ```
+ ```javascript
 raygansms.CorrespondingMessageStatus(MessageIDs);
  ```
 
@@ -227,7 +227,7 @@ raygansms.CorrespondingMessageStatus(MessageIDs);
 نمونه کد فراخوانی:
 </div>
 
-```
+```javascript
 raygansms.GetGroupMessageId(UserGroupID);
 ```
 
@@ -249,7 +249,7 @@ raygansms.GetGroupMessageId(UserGroupID);
 نمونه کد فراخوانی:
 </div>
 
-```
+```javascript
 raygansms.ReceiveMessages(PhoneNumber, (System.currentTimeMillis() - (60 \* 60 \* 24 \* 60)) / 1000L,System.currentTimeMillis() / 1000L, 1);
 ```
 
@@ -294,7 +294,7 @@ raygansms.GetPrices();
 نمونه کد فراخوانی:
 </div>
 
-```
+```javascript
 raygansms.ShowWhiteList(Mobiles);
 ```
 
