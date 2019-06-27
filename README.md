@@ -139,7 +139,7 @@ raygansms.SendMessage(PhoneNumber, Hello, Mobiles, UserGroupID, System.currentTi
 
 در صورتی که تاریخ ارسال، از تاریخ فعلی کمتر باشد یا به عبارتی دیگر از زمان مورد نظر عبور کرده باشید، پیام مورد نظر در لحظه ارسال خواهد شد.
 
-ارسال پیام متناظر ( **متد**  **SendCorrespondingMessage** )
+##  ارسال پیام متناظر (متد SendCorrespondingMessage)
 
 از این متد برای ارسال پیام متناظر استفاده می شود.
 </div>
@@ -159,7 +159,8 @@ raygansms.SendCorrespondingMessage(PhoneNumber, recipientsMessages, UserGroupID)
  ```
  
 <div dir="rtl" >
-## ارسال پیام به پورت خاص (متد SendMessageToPort)
+
+##  ارسال پیام به پورت خاص (متد SendMessageToPort)
 
 از این متد برای ارسال پیام به پورت خاص استفاده می شود.
 </div>
