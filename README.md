@@ -326,5 +326,3 @@ raygansms.ShowWhiteList(Mobiles);
 | SendError | 5002 | در هنگام ارسال پیام خطایی رخ داده است |
 | ReceiveError | 5003 | در هنگام دریافت نتیجه ارسال پیام خطایی رخ داده است |
 | ParamSendError | 5004 | برخی پیام ها در هنگام ارسال با خطا مواجه شده اند |
-
-ggg
